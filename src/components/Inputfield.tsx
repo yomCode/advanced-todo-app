@@ -6,10 +6,15 @@ interface Props{
     setTodo: React.Dispatch<React.SetStateAction<string | number>>
 }
 
-function Inputfield({todo, setTodo}: Props) {
+const Inputfield: React.FC<Props> = ({todo, setTodo}) => {
   return (
         <form action="" className='input'>
-            <input type="input" placeholder='Enter a task' className='input__box' />
+            <input 
+            type="input" 
+            placeholder='Enter a task' 
+            value={todo}
+            onChange={(e) => setTodo(e.target.value)}
+            className='input__box' />
             <button className='input__submit' type='submit'>Go</button>
         </form>
   )
