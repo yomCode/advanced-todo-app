@@ -9,7 +9,7 @@ interface Props{
 
 const Inputfield: React.FC<Props> = ({todo, setTodo, handleAdd}) => {
   return (
-        <form action="" onSubmit={handleAdd} className='input'>
+        <form action="" onSubmit={handleAdd} className='input_field'>
             <input 
             type="input" 
             placeholder='Enter a task' 
